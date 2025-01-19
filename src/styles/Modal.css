@@ -1,0 +1,71 @@
+/* Styling for the modal container */
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content inside the modal to the left */
+    padding: 20px;
+    width: 400px; /* Reduced width (adjust as needed) */
+    height: auto; /* Auto height based on content */
+    max-height: 70vh; /* Maximum height to avoid too tall modals */
+    position: fixed; /* Fixed positioning to place it in the top-right corner */
+    top: 20px; /* Position it 20px from the top */
+    right: 20px; /* Position it 20px from the right side */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border-radius: 8px;
+    z-index: 1000; /* Ensure it stays on top */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+  }
+  
+  /* Styling for the table inside the modal */
+  .modal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  /* Styling for the table headers and data */
+  .modal th, .modal td {
+    padding: 1px 1px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .modal th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .modal td {
+    font-size: 14px;
+  }
+  
+  .modal td:last-child {
+    text-align: center; /* Center the actions column */
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1024px) {
+    .modal {
+      width: 350px; /* Make modal slightly smaller on medium screens */
+      right: 10px; /* Reduce the right margin */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .modal {
+      width: 100%; 
+      right: 0; 
+      top: 10px; 
+      padding: 15px; 
+    }
+  
+    .modal table {
+      font-size: 10px; 
+    }
+  
+    .modal th, .modal td {
+      padding: 2px 2px; 
+    }
+  }
+  
